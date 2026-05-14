@@ -3,14 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 
 import { AppLayout } from '@/shared/components/app-layout'
 
-// const Dashboard = lazy(
-//   () => import('@/features/dashboard/pages/dashboard')
-// )
-
-// const DcaSimulation = lazy(
-//   () => import('@/features/dca-simulation/pages/dca-simulation')
-// )
-
 const FormInpatient = lazy(
   () => import('@/features/inpatient/pages/form-inpatient')
 )
@@ -29,8 +21,6 @@ export default function Router() {
       <Route element={<AppLayout />}>
         <Route path="" element={<FormInpatient />} />
         <Route path="list" element={<ListInpatient />} />
-        {/* <Route path="dca-simulation" element={<DcaSimulation />} /> */}
-        {/* <Route path="form-inpatient" element={<FormInpatient />} /> */}
         <Route path="*" element={<NotMatch />} />
       </Route>
     </Routes>
